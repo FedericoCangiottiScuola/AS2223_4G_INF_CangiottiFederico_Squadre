@@ -12,7 +12,27 @@ namespace UnitTest
         [Test]
         public void AddPlayers()
         {
-            // TODO U.1
+            Team team = new Team("Team 1");
+            Player playerRosa = new Player("nome", "cognome", Player.ERole.Rosa);
+            Player playerRiserva = new Player("nome", "cognome", Player.ERole.Riserva);
+
+            Assert.That(team.AddPlayer(playerRosa), Is.EqualTo(true));
+            Assert.That(team.AddPlayer(playerRosa), Is.EqualTo(true));
+            Assert.That(team.AddPlayer(playerRosa), Is.EqualTo(true));
+            Assert.That(team.AddPlayer(playerRosa), Is.EqualTo(true));
+            Assert.That(team.AddPlayer(playerRosa), Is.EqualTo(true));
+            Assert.That(team.AddPlayer(playerRosa), Is.EqualTo(true));
+            Assert.That(team.AddPlayer(playerRosa), Is.EqualTo(true));
+            Assert.That(team.AddPlayer(playerRosa), Is.EqualTo(true));
+            Assert.That(team.AddPlayer(playerRosa), Is.EqualTo(true));
+            Assert.That(team.AddPlayer(playerRosa), Is.EqualTo(true));
+            Assert.That(team.AddPlayer(playerRosa), Is.EqualTo(true));
+            Assert.That(team.AddPlayer(playerRosa), Is.EqualTo(false));
+
+            Assert.That(team.AddPlayer(playerRiserva), Is.EqualTo(true));
+            Assert.That(team.AddPlayer(playerRiserva), Is.EqualTo(true));
+            Assert.That(team.AddPlayer(playerRiserva), Is.EqualTo(true));
+            Assert.That(team.AddPlayer(playerRiserva), Is.EqualTo(false));
         }
 
         [Test]
