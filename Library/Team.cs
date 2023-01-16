@@ -106,7 +106,7 @@ namespace Library
 
             foreach (Player player in players)
             {
-                ris += $"{player.Description()}";
+                ris += $"{player.Description()},\n";
             }
 
             return ris;
