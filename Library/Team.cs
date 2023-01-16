@@ -86,7 +86,14 @@ namespace Library
         /// <returns></returns>
         public string GetPlayers()
         {
-            // TODO T.4
+            string ris = string.Empty;
+
+            foreach (Player player in players)
+            {
+                ris += $"{player.Description()}";
+            }
+
+            return ris;
         }
 
         public string Name { get { return name; } }
