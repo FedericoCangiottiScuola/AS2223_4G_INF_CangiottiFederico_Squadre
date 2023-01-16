@@ -22,7 +22,7 @@ namespace Library
 
         public string Description()
         {
-            // TODO P.2
+            return $"{surname} {name} {role}";
         }
 
         public ERole Role { 
