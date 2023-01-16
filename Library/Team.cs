@@ -44,7 +44,15 @@ namespace Library
             switch (player.Role)
             {
                 case Player.ERole.Rosa:
-                    if (players.Count + 1 <= MAX_ROSA_PLAYERS)
+                    int nRosa = 0;
+                    foreach(Player p in players)
+                    {
+                        if (player.Role == Player.ERole.Rosa)
+                        {
+                            nRosa++;
+                        }
+                    }
+                    if (nRosa + 1 <= MAX_ROSA_PLAYERS)
                     {
                         players.Add(player);
                         return true;
@@ -52,7 +60,15 @@ namespace Library
                     return false;
 
                 case Player.ERole.Riserva:
-                    if (players.Count + 1 <= MAX_RISERVA_PLAYERS)
+                    int nRiserva = 0;
+                    foreach (Player p in players)
+                    {
+                        if (player.Role == Player.ERole.Riserva)
+                        {
+                            nRiserva++;
+                        }
+                    }
+                    if (nRiserva + 1 <= MAX_RISERVA_PLAYERS)
                     {
                         players.Add(player);
                         return true;
