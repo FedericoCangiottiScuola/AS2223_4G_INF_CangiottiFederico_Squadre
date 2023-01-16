@@ -41,7 +41,26 @@ namespace Library
         /// <returns>True if player has been inserted</returns>
         public bool AddPlayer(Player player)
         {
-            // TODO T.2
+            switch (player.Role)
+            {
+                case Player.ERole.Rosa:
+                    if (players.Count + 1 <= MAX_ROSA_PLAYERS)
+                    {
+                        players.Add(player);
+                        return true;
+                    }
+                    return false;
+
+                case Player.ERole.Riserva:
+                    if (players.Count + 1 <= MAX_RISERVA_PLAYERS)
+                    {
+                        players.Add(player);
+                        return true;
+                    }
+                    return false;
+
+                default: return false;
+            }
         }
 
         /// <summary>
