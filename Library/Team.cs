@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace Library
 {
@@ -103,10 +104,18 @@ namespace Library
         public string GetPlayers()
         {
             string ris = string.Empty;
+            int ultimoGiocatore = players.Count - 1;    // ottengo l'ultima posizione per non stampare la virgola finale
+            int i = 0;  // contatore lista foreach
 
             foreach (Player player in players)
             {
+                if (i == ultimoGiocatore)
+                {
+                    ris += $"{player.Description()}\n";
+                    continue;
+                }
                 ris += $"{player.Description()},\n";
+                i++;
             }
 
             return ris;
