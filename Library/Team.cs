@@ -47,7 +47,7 @@ namespace Library
                     int nRosa = 0;
                     foreach(Player p in players)
                     {
-                        if (player.Role == Player.ERole.Rosa)
+                        if (p.Role == Player.ERole.Rosa)
                         {
                             nRosa++;
                         }
@@ -63,7 +63,7 @@ namespace Library
                     int nRiserva = 0;
                     foreach (Player p in players)
                     {
-                        if (player.Role == Player.ERole.Riserva)
+                        if (p.Role == Player.ERole.Riserva)
                         {
                             nRiserva++;
                         }
